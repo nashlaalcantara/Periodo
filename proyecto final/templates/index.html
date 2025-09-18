@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <title>CLIMA CONSCIENTE</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav main-nav">
+        <ul class="main-nav__list main-list">
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#Inicio">INICIO</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#Cambio_Climatico">¿PROBLEMA?
+            </a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#Comunidad">COMUNIDAD</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#Sugerencias">SUGERENCIAS</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <!-- Vista previa -->
+      <section class="main__home home" id="Inicio">
+        <h1 class="home__title">CLIMA CONSCIENTE</h1>
+        <p class="home__subtitle">Vive, Aprende y Transforma</p>
+      </section>
+      <!-- Acerca de mí -->
+      <section class="main__about about" id="Cambio_Climatico">
+        <h2 class="about__title">Cambio Climático</h2>
+        <div class="about__info info-block">
+          <p class="info-block__text">
+            Es la transformación duradera de los patrones del clima en la Tierra, especialmente el aumento de la temperatura global. Aunque el clima ha cambiado naturalmente a lo largo de la historia del planeta, el cambio actual es principalmente causado por actividades humanas. Esta transformación puede ser causada por factores naturales —como variaciones en la radiación solar, erupciones volcánicas o cambios en la órbita terrestre— pero en la actualidad, el principal motor del cambio climático es la actividad humana.</p>
+          
+          <img
+            class="info-block__img"
+            src="../static/img/Untitled_design__1_-removebg-preview.png"
+            alt="me"
+            width="450"
+            height="450"
+          />
+        </div>
+        <a class="regreso" href="info">Más Información</a>
+      </section>
+      <!-- Sección de competencias -->
+      <section class="main__skills skills" id="Comunidad">
+        <h2 class="skills__title">Redes y Comunidad</h2>
+        <form action="/" method="POST">
+          <ul class="skills__list skills-list">
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/glossy-instagram-3d-render-icon-free-png.png"
+                alt="python"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Instagram</span>
+              <input class="skill__button" type="submit" name="button_python" value="MOSTRAR MÁS">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/discord.png"
+                alt="discord"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Ayuda</span>
+              <input class="skill__button" type="submit" name="button_discord" value="MOSTRAR MÁS">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/x.png"
+                alt="html"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">X</span>
+              <input class="skill__button" type="submit" name="button_html" value="MOSTRAR MÁS">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/image-removebg-preview.png"
+                alt="SQL"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Video</span>
+              <input class="skill__button" type="submit" name="button_db" value="MOSTRAR MÁS">
+            </li>
+          </ul>
+        </form>
+        {% if button_python%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/ig.png" alt="project" width="500">
+              <a class="project__link" href="https://www.instagram.com/intersectionalenvironmentalist/">Abrir Instagram</a>
+          </div>
+        {% endif %}
+        {% if button_discord%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/dis.png" alt="project" width="500">
+              <a class="project__link" href="https://discord.gg/YPwshKcW">Abrir Discord</a>
+          </div>
+        {% endif %}
+        {% if button_html%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/fx.png" alt="project" width="500">
+              <a class="project__link" href="https://x.com/Ecologica2Verde">Abrir en X</a>
+          </div>
+        {% endif %}
+        {% if button_db%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/reciclaje.png" alt="project" width="500">
+              <a class="project__link" href="https://www.tiktok.com/@biofase">Abrir en Youtube</a>
+          </div>
+        {% endif %}
+
+      </section>
+      <!-- Formulario de contacto -->
+      <section class="main__feedback feedback" id="Sugerencias">
+        <h2 class="feedback__title">Sugerencias</h2>
+        <form action="{{url_for('submit_fors')}}" method="POST" class="feedback__form form">
+          <label for="email">
+            <input type="email" class="form__input" name="email" id="email" placeholder="E-mail" required>
+          </label>
+          <label for="text">
+            <textarea name="text" class="form__input" id="text" cols="70" rows="10" required placeholder="Comment"></textarea>
+          </label>
+          <button class="form__button" type="submit">SEND</button>
+        </form>
+      </section>
+    </main>
+    <!-- Pie de página con enlaces a redes sociales -->
+    <footer>
+
+    </footer>
+  </body>
+</html>

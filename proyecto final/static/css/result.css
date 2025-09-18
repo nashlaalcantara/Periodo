@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap");
+body::-webkit-scrollbar {
+  width: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(180deg, #263d57 0%, rgba(120, 156, 163, 0.8) 100%);
+  background-size: cover;       /* Ajusta la imagen para cubrir toda la pantalla */
+  background-position: center;  /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que se repita */
+  background-attachment: fixed; /* Fija la imagen para que no se mueva */
+}
+
+.thanks-title {
+  margin-top: 150px;
+  letter-spacing: 0.3em;
+  font-size: 50px;
+  text-align: center;
+  color: #e6ffe3;
+  line-height: 1;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.otro {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 20px;
+  color: #e6ffe3;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.otro2 {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 20px;
+  color: #e6ffe3;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.regreso {
+  font: inherit;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(111.97deg, #373967 35.63%, rgba(204, 139, 242, 0) 150.16%);
+  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
+  padding: 15px 30px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
